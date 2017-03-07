@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
+<h1 >
+  {{title}} xx {{dis}}
 </h1>
+<button (click)="hh()">test</button>
+<!--<div *ngFor="let hero of heroes | flyHeroes">
+  {{hero.id}} - {{hero.canFly}}
+</div>-->
+<!--<hero-message></hero-message>-->
+<div *ngFor="let hero of ('hero.json' | fetch)">
+{{hero.name}}
+</div>
+
+
+
+
