@@ -21,4 +21,9 @@ export class HeroListComponent implements OnInit{
     });
   }
 
+  addHeroEvent($event) {
+    let hero = Object.assign({}, $event);
+    this.heroList.push(hero);
+  }
+
 }
