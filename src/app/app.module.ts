@@ -10,6 +10,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {HeroFormComponent} from "./hero/hero-form.component";
 import {WikiComponent} from "./wiki/wiki.component";
 import {WikiSmartComponent} from "./wiki/wiki-smart.component";
+import {requestOptionsProvider} from "./default-request-option.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {WikiSmartComponent} from "./wiki/wiki-smart.component";
     AppRoutingModule
   ],
   providers: [
-    HeroService
+    HeroService,
+    requestOptionsProvider
   ],
   bootstrap: [AppComponent]
 })

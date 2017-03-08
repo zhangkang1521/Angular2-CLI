@@ -1,4 +1,4 @@
-import {Http, Response} from "@angular/http";
+import {Http, Response, Headers, RequestOptions} from "@angular/http";
 import {Observable} from "rxjs";
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/toPromise'
@@ -8,7 +8,7 @@ import {Injectable} from "@angular/core";
 @Injectable()
 export class HeroService {
 
-  HERO_URL = 'http://localhost:8080/hero';
+  HERO_URL = 'http://localhost:8081/hero';
 
   constructor(private http: Http) {
 
@@ -29,7 +29,9 @@ export class HeroService {
   }
 
   addHero(params): Observable<any> {
-    return this.http.post(this.HERO_URL, params).map(res => {
+    let headers = new Headers({'Content-Type': 'application/json'});
+    let options = new RequestOptions({headers: headers});
+    return this.http.post(this.HERO_URL, params, options).map(res => {
       return res.json();
     });
   }
