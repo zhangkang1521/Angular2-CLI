@@ -6,16 +6,20 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {HeroListComponent} from "./hero/hero-list.component";
 import {HeroService} from "./hero/hero.service";
+import {AppRoutingModule} from "./app-routing.module";
+import {HeroFormComponent} from "./hero/hero-form.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroListComponent
+    HeroListComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [
     HeroService
