@@ -9,13 +9,15 @@ import {HeroService} from "./hero/hero.service";
 import {AppRoutingModule} from "./app-routing.module";
 import {HeroFormComponent} from "./hero/hero-form.component";
 import {WikiComponent} from "./wiki/wiki.component";
+import {WikiSmartComponent} from "./wiki/wiki-smart.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroListComponent,
     HeroFormComponent,
-    WikiComponent
+    WikiComponent,
+    WikiSmartComponent
   ],
   imports: [
     BrowserModule,
