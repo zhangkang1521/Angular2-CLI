@@ -16,12 +16,13 @@ export class HeroListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    // this.heroService.getHeroes().subscribe(data => {
-    //   this.heroList = data;
-    // });
-    this.heroService.getHeroes().then(data => {
+    this.heroService.getHeroes().subscribe(data => {
+      console.log(data);
       this.heroList = data;
     });
+    // this.heroService.getHeroes().then(data => {
+    //   this.heroList = data;
+    // });
   }
 
   addHeroEvent($event) {

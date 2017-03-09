@@ -8,31 +8,36 @@ import {Injectable} from "@angular/core";
 @Injectable()
 export class HeroService {
 
-  HERO_URL = 'http://localhost:8081/hero';
+  //HERO_URL = 'http://localhost:8081/hero';
+  HERO_URL = '/app/heroes';
 
   constructor(private http: Http) {
 
   }
 
-  // getHeroes(): Observable<Hero[]> {
-  //   // map Applies a given project function to each value emitted by the source Observable, and emits the resulting values as an Observable.
-  //   return this.http.get(this.HERO_URL).map(res => {
-  //     return res.json();
-  //   });
-  // }
+  getHeroes(): Observable<Hero[]> {
+    return this.http.get(this.HERO_URL).map(res => {
+      return res.json().data;
+    });
+  }
 
-  getHeroes(): Promise<Hero[]> {
-    // map Applies a given project function to each value emitted by the source Observable, and emits the resulting values as an Observable.
+ /* getHeroes(): Promise<Hero[]> {
     return this.http.get(this.HERO_URL).toPromise().then(res => {
       return res.json();
     });
-  }
+  }*/
 
   addHero(params): Observable<any> {
     let headers = new Headers({'Content-Type': 'application/json'});
     let options = new RequestOptions({headers: headers});
     return this.http.post(this.HERO_URL, params, options).map(res => {
       return res.json();
+    });
+  }
+
+  getHero(id: number): Observable<Hero> {
+    return this.http.get(this.HERO_URL + "/" + id).map(res => {
+      return res.json().data;
     });
   }
 

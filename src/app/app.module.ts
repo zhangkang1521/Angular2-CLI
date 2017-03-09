@@ -11,6 +11,8 @@ import {HeroFormComponent} from "./hero/hero-form.component";
 import {WikiComponent} from "./wiki/wiki.component";
 import {WikiSmartComponent} from "./wiki/wiki-smart.component";
 import {requestOptionsProvider} from "./default-request-option.service";
+import {InMemoryWebApiModule} from "angular-in-memory-web-api";
+import {HeroData} from "./hero/hero-data";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {requestOptionsProvider} from "./default-request-option.service";
     FormsModule,
     HttpModule,
     JsonpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InMemoryWebApiModule.forRoot(HeroData)
   ],
   providers: [
     HeroService,

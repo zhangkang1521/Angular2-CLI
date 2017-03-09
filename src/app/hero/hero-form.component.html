@@ -1,4 +1,5 @@
 <form #heroFrom="ngForm">
+  <input type="text" name="id" [(ngModel)]="hero.id">
   <input type="text" name="name" [(ngModel)]="hero.name">
   <button (click)="save()">save</button>
 </form>

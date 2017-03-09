@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'hero/list', pathMatch: 'full' },
   { path: 'hero/list',  component: HeroListComponent },
   { path: 'hero/add',  component: HeroFormComponent },
+  { path: 'hero/detail/:id',  component: HeroFormComponent },
   { path: 'wiki',  component: WikiComponent },
   { path: 'wiki-smart',  component: WikiSmartComponent }
 ];
