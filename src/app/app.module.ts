@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {HighlightDirective} from "./directive/highlight.directive";
+import {HeavyLoaderComponent} from "./component/heavy-loader.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    HeavyLoaderComponent
   ],
   imports: [
     BrowserModule,
