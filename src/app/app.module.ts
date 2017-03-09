@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {HighlightDirective} from "./directive/highlight.directive";
 import {HeavyLoaderComponent} from "./component/heavy-loader.component";
+import {UnlessDirective} from "./directive/unless.directive";
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
-    HeavyLoaderComponent
+    HeavyLoaderComponent,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

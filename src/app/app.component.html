@@ -28,8 +28,19 @@
   <template ngSwitchDefault>Unknown</template>
 </div>
 
-
 <template [ngIf]="true">
  xx
+</template>
+
+<div *ngIf="true">
+  ngIf true
+</div>
+
+<p *myUnless="false">
+  myUnless test
+</p>
+
+<template [myUnless]="false">
+  hello,myUnless
 </template>
 
