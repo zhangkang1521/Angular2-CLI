@@ -1,5 +1,7 @@
 <h1>
   {{title}}
-</h1>
+</h1><!--
 <p myHighlight [highlightColor]="color">I am green with envy!</p>
-<p myHighlight [highlightColor]="'green'">I am green with envy!</p>
+<p myHighlight highlightColor="green">I am green with envy!</p>
+<p myHighlight [myHighlight]="'green'">I am green with envy!</p>-->
+<p [myHighlight]="color">Highlight me!</p>
