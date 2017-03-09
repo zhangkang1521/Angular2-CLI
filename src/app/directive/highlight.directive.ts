@@ -10,15 +10,19 @@ export class HighlightDirective {
   @Input('myHighlight')
   highlightColor: string;
 
+  @Input()
+  defaultColor: string;
+
   constructor(private el: ElementRef) {
-    // el.nativeElement.style.background = 'yellow';
+     //el.nativeElement.style.color = 'red';
   }
 
   @HostListener("mouseenter")
   onMouseEnter() {
     console.log('mouseEnter');
     console.log(this.highlightColor);
-    this.highlight(this.highlightColor);
+    console.log(this.defaultColor);
+    this.highlight(this.highlightColor || this.defaultColor || 'green');
   }
 
   @HostListener("mouseleave")

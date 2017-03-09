@@ -4,4 +4,10 @@
 <p myHighlight [highlightColor]="color">I am green with envy!</p>
 <p myHighlight highlightColor="green">I am green with envy!</p>
 <p myHighlight [myHighlight]="'green'">I am green with envy!</p>-->
-<p [myHighlight]="color">Highlight me!</p>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+{{color}}
+<p [myHighlight]="color" defaultColor="violet">Highlight me!</p>
