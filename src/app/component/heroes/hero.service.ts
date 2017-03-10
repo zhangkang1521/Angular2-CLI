@@ -11,6 +11,10 @@ export class HeroService {
 
   }
 
+  getHeroList(params: any) {
+    return this.http.get(this.HERO_URL).map(res => res.json());
+  }
+
   getHero(id: number) {
     return this.http.get(this.HERO_URL + '?id=' + id).map(res => res.json());
   }

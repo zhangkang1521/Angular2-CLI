@@ -1,5 +1,5 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 import {HeroService} from "./hero.service";
 import 'rxjs/add/operator/switchMap'
 import {Hero} from "./hero";
@@ -14,6 +14,7 @@ export class HeroDetailComponent implements OnInit,OnDestroy {
 
   constructor(
     private route:ActivatedRoute,
+    private router: Router,
     private heroService:HeroService
   ) { }
 
@@ -32,6 +33,11 @@ export class HeroDetailComponent implements OnInit,OnDestroy {
 
   ngOnDestroy() {
     console.log("HeroDetailComponent Destroy");
+  }
+
+  gotoHeroes() {
+    let heroId = this.hero ? this.hero.id : null;
+    this.router.navigate(['/heroes', {id: heroId, foo: 'foo'}]);
   }
 
 }
