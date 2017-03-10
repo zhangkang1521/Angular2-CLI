@@ -5,10 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CrisisListComponent } from './component/crisis-list/crisis-list.component';
-import { HeroListComponent } from './component/hero-list/hero-list.component';
-import { HeroDetailComponent } from './component/hero-detail/hero-detail.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {HeroModule} from "./component/heroes/heroes.module";
 
 
 
@@ -16,14 +15,13 @@ import {AppRoutingModule} from "./app-routing.module";
   declarations: [
     AppComponent,
     CrisisListComponent,
-    HeroListComponent,
-    HeroDetailComponent,
     PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HeroModule,
     AppRoutingModule
   ],
   providers: [],
