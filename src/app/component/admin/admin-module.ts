@@ -2,6 +2,7 @@ import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {AdminComponent} from "./admin.component";
 import {AdminRoutingModule} from "./admin-routing.module";
+import {AuthGuard} from "./auth-guard.service";
 
 @NgModule({
   imports: [
@@ -10,6 +11,9 @@ import {AdminRoutingModule} from "./admin-routing.module";
   ],
   declarations: [
     AdminComponent
+  ],
+  providers: [
+    AuthGuard
   ]
 })
 
