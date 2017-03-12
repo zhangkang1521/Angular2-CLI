@@ -8,13 +8,15 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
 import {AppRoutingModule} from "./app-routing.module";
 import {HeroModule} from "./component/heroes/heroes.module";
 import {CrisisCenterModule} from "./component/cirsis-center/crisis-center.module";
+import {ComposeMessageComponent} from "./component/compose-message/compose-message.component";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ComposeMessageComponent
   ],
   imports: [
     BrowserModule,
