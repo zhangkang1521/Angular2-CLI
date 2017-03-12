@@ -22,7 +22,7 @@ export class HeroListComponent implements OnInit {
   ngOnInit() {
     this.heroes = this.route.params
       .switchMap((params: Params) => {
-        this.selectedId = +params['id'];
+        this.selectedId = +params['id']; // 获取回传的url参数
         return this.heroService.getHeroList(null);
       });
   }
