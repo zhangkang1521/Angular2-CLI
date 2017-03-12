@@ -10,6 +10,8 @@ import {HeroModule} from "./component/heroes/heroes.module";
 import {CrisisCenterModule} from "./component/cirsis-center/crisis-center.module";
 import {ComposeMessageComponent} from "./component/compose-message/compose-message.component";
 import {AdminModule} from "./component/admin/admin-module";
+import {LoginRoutingModule} from "./component/login/login-routing.module";
+import {LoginComponent} from "./component/login/login.component";
 
 
 
@@ -17,7 +19,8 @@ import {AdminModule} from "./component/admin/admin-module";
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    ComposeMessageComponent
+    ComposeMessageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import {AdminModule} from "./component/admin/admin-module";
     HeroModule,
     CrisisCenterModule,
     AdminModule,
+    LoginRoutingModule,
     AppRoutingModule
   ],
   providers: [],
