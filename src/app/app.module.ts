@@ -4,17 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { CrisisListComponent } from './component/crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {HeroModule} from "./component/heroes/heroes.module";
+import {CrisisCenterModule} from "./component/cirsis-center/crisis-center.module";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CrisisListComponent,
     PageNotFoundComponent
   ],
   imports: [
@@ -22,6 +21,7 @@ import {HeroModule} from "./component/heroes/heroes.module";
     FormsModule,
     HttpModule,
     HeroModule,
+    CrisisCenterModule,
     AppRoutingModule
   ],
   providers: [],
