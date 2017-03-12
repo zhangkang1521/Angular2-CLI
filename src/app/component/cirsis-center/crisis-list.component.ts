@@ -10,12 +10,10 @@ import {Crisis, CrisisService} from "./crisis.service";
   template: `
     <ul class="items">
       <li *ngFor="let crisis of crises | async"
-        
-        [class.selected]="isSelected(crisis)">
-        <a [routerLink]="[crisis.id]">
+        (click)="onSelect(crisis)"
+        >
           <span class="badge">{{ crisis.id }}</span>
           {{ crisis.name }}
-          </a>
       </li>
     </ul>
 
