@@ -9,6 +9,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {HeroModule} from "./component/heroes/heroes.module";
 import {CrisisCenterModule} from "./component/cirsis-center/crisis-center.module";
 import {ComposeMessageComponent} from "./component/compose-message/compose-message.component";
+import {AdminModule} from "./component/admin/admin-module";
 
 
 
@@ -24,6 +25,7 @@ import {ComposeMessageComponent} from "./component/compose-message/compose-messa
     HttpModule,
     HeroModule,
     CrisisCenterModule,
+    AdminModule,
     AppRoutingModule
   ],
   providers: [],
