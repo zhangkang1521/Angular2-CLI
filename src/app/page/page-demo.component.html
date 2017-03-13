@@ -1,0 +1,7 @@
+<!-- directionLinks 上一页，下一页按钮-->
+<!--
+  boundaryLinks 首页，尾页按钮
+  maxSize: 页数过多时，控制显示最多的页数
+-->
+
+<pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" [directionLinks]="false" [maxSize]="20"></pagination>
