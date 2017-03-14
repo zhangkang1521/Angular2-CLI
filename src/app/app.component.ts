@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  myDate = new Date();
+  myDate2 = '2017-02-03';
+
+  test() {
+    console.log(typeof this.myDate);
+    console.log(this.myDate);
+  }
 }
