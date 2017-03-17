@@ -12,12 +12,16 @@ export class AppComponent implements OnInit{
   myData = "a";
 
   ngOnInit(): void {
-    this.mySource = [
-      "abandon",
-      "an",
-      "ant",
-      "hello"
-    ]
+    this.mySource = [{"id":5500,"value":"aac"},
+      {"id":7689,"value":"abc"}];
   }
+  test(searchInput, $event) {
+    console.log(searchInput);
+    console.log($event);
+  }
+
+  // myListFormatter(data: any): string {
+  //   return `888`;
+  // }
 
 }

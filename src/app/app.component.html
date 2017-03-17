@@ -1,4 +1,9 @@
 <h1>
   {{title}}
 </h1>
-<input auto-complete [(ngModel)]="myData" [source]="mySource" />
+<input auto-complete [(ngModel)]="myData" [source]="mySource"
+       select-value-of="id"
+       display-property-name="value"
+        #searchInput (valueChanged)="test(searchInput, $event)"/>
+
+{{myData}}
