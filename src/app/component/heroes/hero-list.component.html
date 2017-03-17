@@ -1,7 +1,7 @@
 <h2>HEROES</h2>
 <ul class="items">
   <li *ngFor="let hero of heroes | async" [class.selected]="selectedId == hero.id"
-      (click)="onSelect(hero)">
+      [routerLink]="['/hero', hero.id]">
     <span class="badge">{{ hero.id }}</span> {{ hero.name }}
   </li>
 </ul>
