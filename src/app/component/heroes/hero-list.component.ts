@@ -20,6 +20,10 @@ export class HeroListComponent implements OnInit {
     private heroService: HeroService) { }
 
   ngOnInit() {
+    // 获取url中 ?limit=5
+    // this.route.queryParams.subscribe(params => {
+    //   console.log(params['limit']);
+    // });
     this.heroes = this.route.params
       .switchMap((params: Params) => {
         this.selectedId = +params['id']; // 获取回传的url参数
