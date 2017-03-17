@@ -38,6 +38,9 @@ export class CrisisListComponent implements OnInit {
     this.crises = this.route.params
       .switchMap((params: Params) => {
         this.selectedId = +params['id'];
+        // matrix参数，传值给分段对应的Component
+        // http://localhost:4201/crisis-center;foo=aa/1;foo=bb
+        console.log('crisis list:' + params['foo']);
         return this.service.getCrises();
       });
   }

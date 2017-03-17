@@ -21,6 +21,7 @@ export class CrisisDetailComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
     console.log('crisisDetail init');
     this.route.params.switchMap((params:Params) => {
+      console.log('detail: '+params['foo']);
       return this.crisisService.getCrisis(+params['id']);
     }).subscribe((crisis: Crisis) => {
       this.crisis = crisis;
