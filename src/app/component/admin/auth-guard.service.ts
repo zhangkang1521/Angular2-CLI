@@ -15,6 +15,11 @@ export class AuthGuard implements CanActivate {
     let url = state.url;
     console.log(url);
     return this.checkLogin(url);
+    // return new Observable<boolean>( observer => {
+    //   console.log(observer);
+    //   observer.next(true);
+    //   observer.complete();
+    // })
   }
 
   checkLogin(url: string): boolean {
