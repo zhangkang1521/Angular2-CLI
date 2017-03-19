@@ -12,8 +12,12 @@ const appRoutes: Routes = [
     canDeactivate: [CanDeactiveGuard]
   },
   { path: '',
-    redirectTo: '/heroes',
+    redirectTo: '/crisis-center',
     pathMatch: 'full'
+  },
+  {
+    path: 'heroes',
+    loadChildren: 'app/component/heroes/heroes.module.ts#HeroModule'
   },
   { path: '**', component: PageNotFoundComponent }
 ];
