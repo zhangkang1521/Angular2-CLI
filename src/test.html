@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jasmine test</title>
+  <link rel="stylesheet" href="../node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+  <script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+  <script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+  <script src="../node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+</head>
+<body>
+  <script>
+
+    describe("jasmine测试", function () {
+
+        it("测试Tobe", function () {
+          var a = 3;
+          expect(a).toBe(3);
+        });
+
+        it("测试Equal", function () {
+          var a = { id: 12 };
+          var b = { id:　12 };
+          expect(a).toEqual(b);
+        });
+
+        it("测试正则表达式", function () {
+          expect("123").toMatch("123");
+        });
+
+        it("测试Contains", function () {
+          var arr = ["a", "b", "c"];
+          expect(arr).toContain("a");
+        });
+
+
+    });
+  </script>
+</body>
+</html>
