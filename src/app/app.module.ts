@@ -12,6 +12,7 @@ import {ComposeMessageComponent} from "./component/compose-message/compose-messa
 import {AdminModule} from "./component/admin/admin-module";
 import {LoginRoutingModule} from "./component/login/login-routing.module";
 import {LoginComponent} from "./component/login/login.component";
+import {CanDeactiveGuard} from "./component/compose-message/can-deactive-guard";
 
 
 
@@ -32,7 +33,7 @@ import {LoginComponent} from "./component/login/login.component";
     LoginRoutingModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CanDeactiveGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 
-import {Component, HostBinding} from "@angular/core";
+import {Component, HostBinding, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
 
 @Component({
@@ -7,13 +7,20 @@ import {Router} from "@angular/router";
   templateUrl: './compose-message.component.html'
 })
 
-export class ComposeMessageComponent {
+export class ComposeMessageComponent implements OnInit{
+
 
   details: string;
+  message: string = "hello";
+  oldMessage: string;
   sending: boolean = false;
 
   constructor(private router: Router) {
 
+  }
+
+  ngOnInit(): void {
+    this.oldMessage = this.message;
   }
 
   send() {
@@ -31,6 +38,10 @@ export class ComposeMessageComponent {
 
   closePopup() {
     this.router.navigate([{ outlets: { popup: null}}]);
+  }
+
+  isModified() {
+    return this.oldMessage != this.message;
   }
 
 }
