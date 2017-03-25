@@ -4,22 +4,25 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {PaginationModule, DatepickerModule} from "ng2-bootstrap";
+import {PaginationModule, DatepickerModule, ModalModule} from "ng2-bootstrap";
 import {PageDemoComponent} from "./page/page-demo.component";
 import {DatePickerDemoComponent} from "./date-picker/date-picker-demo.component";
+import {StaticModalDemoComponent} from "./modal/static-modal-demo.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     PageDemoComponent,
-    DatePickerDemoComponent
+    DatePickerDemoComponent,
+    StaticModalDemoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     PaginationModule.forRoot(),
-    DatepickerModule.forRoot()
+    DatepickerModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
