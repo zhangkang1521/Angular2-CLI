@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {HttpModule, RequestOptions, Http} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
@@ -13,6 +13,8 @@ import {AdminModule} from "./component/admin/admin-module";
 import {LoginRoutingModule} from "./component/login/login-routing.module";
 import {LoginComponent} from "./component/login/login.component";
 import {CanDeactiveGuard} from "./component/compose-message/can-deactive-guard";
+import {HttpInterceptorBackend} from "./http/http-interceptor-backend";
+import {httpFactory} from "./http/http-factory";
 
 
 
@@ -33,7 +35,11 @@ import {CanDeactiveGuard} from "./component/compose-message/can-deactive-guard";
     LoginRoutingModule,
     AppRoutingModule
   ],
-  providers: [CanDeactiveGuard],
+  providers: [
+    CanDeactiveGuard,
+    HttpInterceptorBackend,
+    {provide: Http, useFactory: httpFactory, deps: [HttpInterceptorBackend, RequestOptions]}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
