@@ -8,13 +8,15 @@ import {PaginationModule, DatepickerModule, ModalModule} from "ng2-bootstrap";
 import {PageDemoComponent} from "./page/page-demo.component";
 import {DatePickerDemoComponent} from "./date-picker/date-picker-demo.component";
 import {StaticModalDemoComponent} from "./modal/static-modal-demo.component";
+import {ChildModalDemoComponent} from "./modal/child-modal-demo.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     PageDemoComponent,
     DatePickerDemoComponent,
-    StaticModalDemoComponent
+    StaticModalDemoComponent,
+    ChildModalDemoComponent
   ],
   imports: [
     BrowserModule,
