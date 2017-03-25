@@ -9,6 +9,7 @@ import {PageDemoComponent} from "./page/page-demo.component";
 import {DatePickerDemoComponent} from "./date-picker/date-picker-demo.component";
 import {StaticModalDemoComponent} from "./modal/static-modal-demo.component";
 import {ChildModalDemoComponent} from "./modal/child-modal-demo.component";
+import {AutoShownModalDemoComponent} from "./modal/auto-shown-modal-demo.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {ChildModalDemoComponent} from "./modal/child-modal-demo.component";
     PageDemoComponent,
     DatePickerDemoComponent,
     StaticModalDemoComponent,
-    ChildModalDemoComponent
+    ChildModalDemoComponent,
+    AutoShownModalDemoComponent
   ],
   imports: [
     BrowserModule,
