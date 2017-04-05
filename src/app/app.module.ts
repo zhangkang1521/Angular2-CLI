@@ -10,6 +10,7 @@ import {DatePickerDemoComponent} from "./date-picker/date-picker-demo.component"
 import {StaticModalDemoComponent} from "./modal/static-modal-demo.component";
 import {ChildModalDemoComponent} from "./modal/child-modal-demo.component";
 import {AutoShownModalDemoComponent} from "./modal/auto-shown-modal-demo.component";
+import {GridComponent} from "./css/grid.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {AutoShownModalDemoComponent} from "./modal/auto-shown-modal-demo.compone
     DatePickerDemoComponent,
     StaticModalDemoComponent,
     ChildModalDemoComponent,
-    AutoShownModalDemoComponent
+    AutoShownModalDemoComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
