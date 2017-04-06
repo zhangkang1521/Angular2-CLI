@@ -4,6 +4,9 @@ import {Directive, TemplateRef, ViewContainerRef, Input} from "@angular/core";
   selector: '[myUnless]'
 })
 
+/**
+ * 结构型指令： ngIf相反指令
+ */
 export class UnlessDirective {
   constructor(
     private templateRef: TemplateRef<any>,

@@ -1,46 +1,9 @@
 <h1>
   {{title}}
-</h1><!--
-<p myHighlight [highlightColor]="color">I am green with envy!</p>
-<p myHighlight highlightColor="green">I am green with envy!</p>
-<p myHighlight [myHighlight]="'green'">I am green with envy!</p>-->
-<!--<div>
-  <input type="radio" name="colors" (click)="color='lightgreen'">Green
-  <input type="radio" name="colors" (click)="color='yellow'">Yellow
-  <input type="radio" name="colors" (click)="color='cyan'">Cyan
-</div>
-{{color}}
-<p [myHighlight]="color" defaultColor="violet">Highlight me!</p>-->
-
-<!--<div>&lt;!&ndash; Visibility &ndash;&gt;
-  <button (click)="isVisible = !isVisible">show | hide</button>
-  <heavy-loader [style.display]="isVisible ? 'inline' : 'none'" [logs]="logs"></heavy-loader>
-</div>
-<div>&lt;!&ndash; NgIf &ndash;&gt;
-  <button (click)="condition = !condition">if | !if</button>
-  <heavy-loader *ngIf="condition" [logs]="logs"></heavy-loader>
-</div>
-<h4>heavy-loader log:</h4>
-<div *ngFor="let message of logs">{{message}}</div>-->
-<div [ngSwitch]="status">
-  <template [ngSwitchCase]="'in-mission'">In Mission</template>
-  <template [ngSwitchCase]="'ready'">Ready</template>
-  <template ngSwitchDefault>Unknown</template>
-</div>
-
-<template [ngIf]="true">
- xx
-</template>
-
-<div *ngIf="true">
-  ngIf true
-</div>
-
-<p *myUnless="false">
-  myUnless test
-</p>
-
-<template [myUnless]="false">
-  hello,myUnless
-</template>
-
+</h1>
+<form [formGroup]="loginForm">
+  <p>name:<input type="text" formControlName="name"></p>
+  <p>password:<input type="text" formControlName="password"></p>
+</form>
+{{loginForm.value | json}}
+{{loginForm.status}}

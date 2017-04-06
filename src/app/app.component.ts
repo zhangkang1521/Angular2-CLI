@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormControl, Validators, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-  color;
-  logs = [];
-  status = 'ready';
+  color = 'green';
+  // loginControl: FormControl = new FormControl({value: 'xxs', disabled: true});
+  // loginControl: FormControl = new FormControl('s', Validators.required);
+  loginForm: FormGroup;
+
+  constructor() {
+    this.loginForm = new FormGroup({
+      name: new FormControl("", Validators.required),
+      password: new FormControl("")
+    });
+  }
 }

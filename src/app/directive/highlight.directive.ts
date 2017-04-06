@@ -2,19 +2,19 @@ import {Directive, ElementRef, HostListener, Input} from "@angular/core";
 
 @Directive(
   {
-    selector: '[myHighlight]' // Attention, 方括号
+    selector: '[highlight]' // Attention, 方括号
   }
 )
 
 export class HighlightDirective {
-  @Input('myHighlight')
+  @Input()
   highlightColor: string;
 
   @Input()
   defaultColor: string;
 
   constructor(private el: ElementRef) {
-     //el.nativeElement.style.color = 'red';
+     el.nativeElement.style.color = this.highlightColor;
   }
 
   @HostListener("mouseenter")
