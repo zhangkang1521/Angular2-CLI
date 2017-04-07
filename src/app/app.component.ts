@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  selectedCities: string[] = [];
+
+  selectedCategories: string[] = ['Technology', 'Sports'];
+
+  checked: boolean = false;
 }
