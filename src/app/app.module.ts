@@ -9,6 +9,7 @@ import {HeavyLoaderComponent} from "./component/heavy-loader.component";
 import {UnlessDirective} from "./directive/unless.directive";
 import {BeautifulBackgroundDirective} from "./directive/beautifulBackground.directive";
 import {BeautifulBackground2Directive} from "./directive/beautifulBackground2.directive";
+import {ClickDirective} from "./directive/click.directive";
 
 @NgModule({
   declarations: [
@@ -17,8 +18,8 @@ import {BeautifulBackground2Directive} from "./directive/beautifulBackground2.di
     HeavyLoaderComponent,
     UnlessDirective,
     BeautifulBackground2Directive,
-    BeautifulBackgroundDirective
-
+    BeautifulBackgroundDirective,
+    ClickDirective
   ],
   imports: [
     BrowserModule,

@@ -3,3 +3,13 @@
 </h1>
 <div  myBeautifulBackground [background]="color"  [front]="'yellow'" [front2]="'red'" myBeautifulBackground2 >test change background</div>
 
+<div [click]="'red'">click me!</div>
+<p *myUnless="false">
+  hello
+</p>
+
+<template [myUnless]="false">
+<p>
+  hello
+</p>
+</template>
