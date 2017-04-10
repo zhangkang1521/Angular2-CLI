@@ -1,0 +1,8 @@
+<p>value:{{value}}</p>
+<button (click)="inc()">Increment</button>
+<div [ngPlural]="value">
+  <template ngPluralCase="0">this is 0</template>
+  <template ngPluralCase="1">this is 1</template>
+  <template ngPluralCase="few">this is few</template>
+  <template ngPluralCase="other">this is other</template>
+</div>
