@@ -1,3 +1,8 @@
 <h1>
   {{title}}
+  <input type="text" [(ngModel)]="title">
 </h1>
+<div>{{user | json}} <input type="text" [(ngModel)]="name"><button (click)="parentChange()">parent change</button></div>
+<user [user]="user2" (userChange)="changed($event)" #detail2></user>
+<user [user]="user" (userChange)="changed($event)" #detail></user>
+
