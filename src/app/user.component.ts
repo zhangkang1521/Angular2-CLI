@@ -1,4 +1,7 @@
-import {Component, Input, OnInit, Output, EventEmitter, ElementRef, OnChanges, SimpleChanges} from "@angular/core";
+import {
+  Component, Input, OnInit, Output, EventEmitter, ElementRef, OnChanges, SimpleChanges,
+  DoCheck
+} from "@angular/core";
 import {Observable, Subject} from "rxjs";
 import {User} from "./user";
 @Component({
@@ -6,7 +9,8 @@ import {User} from "./user";
   template: `{{_user | json}} <input type="text" [(ngModel)]="name"> <button (click)="change()">change</button>`
 })
 
-export class UserComponent implements OnInit,OnChanges{
+export class UserComponent implements OnInit,DoCheck{
+
 
   name;
 
@@ -22,12 +26,16 @@ export class UserComponent implements OnInit,OnChanges{
   @Output() userChange = new EventEmitter();
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
+    console.log('ngOnChange');
   }
 
 
   ngOnInit() {
+    console.log('ngOnInit')
+  }
 
+  ngDoCheck(): void {
+    console.log('ngDoCheck');
   }
 
   change() {

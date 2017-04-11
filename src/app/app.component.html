@@ -1,9 +1,6 @@
 <h1>
   {{title}}
 </h1>
-<content-demo>
-  <p>aaa</p>
-  <button>test</button>
-  <p>xxx</p>
-</content-demo>
+<!--<user [user]="user"></user>-->
+<input type="text" [ngModel]="title" (ngModelChange)="this.title=$event">
 

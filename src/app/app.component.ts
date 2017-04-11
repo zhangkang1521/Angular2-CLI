@@ -13,6 +13,7 @@ export class AppComponent implements OnInit{
   user: User;
   user2: User;
   name: string;
+  flag = false;
 
   @ViewChild('detail') detail;
   @ViewChild('detail2') detail2;
@@ -36,6 +37,10 @@ export class AppComponent implements OnInit{
     // this.user = newUser;
     this.detail.change();
     this.detail2.change();
+  }
+
+  test() {
+    console.log(this.title);
   }
 
 }
