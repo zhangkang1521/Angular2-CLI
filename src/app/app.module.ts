@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import {UserComponent} from "./user.component";
 import {ContentDemoComponent} from "./content-demo.component";
 import {ChangeDetectorDemoComponent} from "./change-detector-demo";
+import {DetectionStrategyComponent} from "./detection-strategy.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     ContentDemoComponent,
-    ChangeDetectorDemoComponent
+    ChangeDetectorDemoComponent,
+    DetectionStrategyComponent
   ],
   imports: [
     BrowserModule,

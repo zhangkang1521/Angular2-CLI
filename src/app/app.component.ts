@@ -32,11 +32,9 @@ export class AppComponent implements OnInit{
   }
 
   parentChange() {
-    // let newUser = new User();
-    // newUser.username = this.name;
-    // this.user = newUser;
-    this.detail.change();
-    this.detail2.change();
+    let newUser = new User();
+    newUser.username = 'xx';
+    this.user = newUser;
   }
 
   test() {
