@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {UserComponent} from "./user.component";
 import {ContentDemoComponent} from "./content-demo.component";
+import {ChangeDetectorDemoComponent} from "./change-detector-demo";
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    ContentDemoComponent
+    ContentDemoComponent,
+    ChangeDetectorDemoComponent
   ],
   imports: [
     BrowserModule,
