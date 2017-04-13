@@ -1,4 +1,7 @@
-import {Component, AfterContentChecked, AfterContentInit} from "@angular/core";
+import {
+  Component, AfterContentChecked, AfterContentInit, ContentChildren, QueryList, Renderer,
+  ElementRef, Directive
+} from "@angular/core";
 
 @Component({
   selector: 'content-demo',
@@ -6,8 +9,16 @@ import {Component, AfterContentChecked, AfterContentInit} from "@angular/core";
 })
 export class ContentDemoComponent implements AfterContentChecked,AfterContentInit{
 
+  @ContentChildren('theInput2') theInput: QueryList<any>;
+
+  constructor(private renderer: Renderer) {
+
+  }
+
   ngAfterContentInit(): void {
-    console.log('ngAfterContentInit')
+    console.log('ngAfterContentInit');
+    console.log(this.theInput)
+    this.renderer.invokeElementMethod(this.theInput.first.nativeElement, 'focus');
   }
 
   ngAfterContentChecked(): void {
@@ -15,3 +26,5 @@ export class ContentDemoComponent implements AfterContentChecked,AfterContentIni
   }
 
 }
+
+
