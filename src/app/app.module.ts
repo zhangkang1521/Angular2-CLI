@@ -11,6 +11,8 @@ import {DetectionStrategyComponent} from "./detection-strategy.component";
 import {MyInputComponent} from "./my-input.component";
 import {MyInput2Component} from "./my-input2.component";
 import {AnimationDemoComponent} from "./animation-demo.component";
+import {EncapsulationDemoComponent} from "./encapsulation-demo.component";
+import {EncapsulationDemo2Component} from "./encapsulation-demo2.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {AnimationDemoComponent} from "./animation-demo.component";
     DetectionStrategyComponent,
     MyInputComponent,
     MyInput2Component,
-    AnimationDemoComponent
+    AnimationDemoComponent,
+    EncapsulationDemoComponent,
+    EncapsulationDemo2Component
   ],
   imports: [
     BrowserModule,
