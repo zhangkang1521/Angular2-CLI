@@ -10,6 +10,7 @@ import {ChangeDetectorDemoComponent} from "./change-detector-demo";
 import {DetectionStrategyComponent} from "./detection-strategy.component";
 import {MyInputComponent} from "./my-input.component";
 import {MyInput2Component} from "./my-input2.component";
+import {AnimationDemoComponent} from "./animation-demo.component";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MyInput2Component} from "./my-input2.component";
     ChangeDetectorDemoComponent,
     DetectionStrategyComponent,
     MyInputComponent,
-    MyInput2Component
+    MyInput2Component,
+    AnimationDemoComponent
   ],
   imports: [
     BrowserModule,
