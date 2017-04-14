@@ -1,0 +1,13 @@
+<!-- ngForm 指令可以不用添加，系统默认为所有的form添加 -->
+<form #userForm="ngForm">
+  <input type="text" [(ngModel)]="user.id" name="id">
+  <input type="text" [(ngModel)]="user.age" name="age" #age="ngModel" required>
+  <input type="radio" name="sex" [(ngModel)]="user.sex" value="male">
+  <input type="radio" name="sex" [(ngModel)]="user.sex" value="female">
+  <input type="checkbox" name="lock" [(ngModel)]="user.lock" value="xx">
+  <select name="interestValue" [(ngModel)]="user.interest">
+    <option *ngFor="let interest of interests" [value]="interest.value">{{interest.display}}</option>
+  </select>
+</form>
+{{userForm.value | json}}
+valid:{{age.valid}} pristine:{{age.pristine}} touched:{{age.touched}}
