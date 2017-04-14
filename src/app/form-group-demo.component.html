@@ -1,0 +1,20 @@
+<form #userForm="ngForm" (ngSubmit)="doSubmit()">
+  <fieldset ngModelGroup="group1" #group3="ngModelGroup">
+    <input type="text" [(ngModel)]="user.id" name="id">
+    <input type="text" [(ngModel)]="user.username" name="username" minlength="5" maxlength="10" required #username="ngModel">
+    <p [hidden]="username.valid || username.pristine">用户名长度为5-10位，必填</p>
+    <input type="text" [(ngModel)]="user.age" name="age" #age="ngModel" required>
+  </fieldset>
+  <fieldset ngModelGroup="group2" #group4="ngModelGroup">
+    <input type="radio" name="sex" [(ngModel)]="user.sex" value="male">
+    <input type="radio" name="sex" [(ngModel)]="user.sex" value="female">
+    <input type="checkbox" name="lock" [(ngModel)]="user.lock" value="xx">
+    <select name="interestValue" [(ngModel)]="user.interest">
+      <option *ngFor="let interest of interests" [value]="interest.value">{{interest.display}}</option>
+    </select>
+  </fieldset>
+  <button type="submit" [disabled]="!userForm.valid">submit</button>
+  <button type="reset">reset</button>
+</form>
+{{group3.valid}}  {{group4.valid}}
+{{userForm.value | json}}

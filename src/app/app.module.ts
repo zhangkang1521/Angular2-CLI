@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {FormDemoComponent} from "./form.component";
+import {FormGroupDemoComponent} from "./form-group-demo.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormDemoComponent
+    FormDemoComponent,
+    FormGroupDemoComponent
   ],
   imports: [
     BrowserModule,
