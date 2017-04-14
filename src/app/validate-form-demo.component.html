@@ -1,0 +1,8 @@
+<form [formGroup]="customForm" (ngSubmit)="onSubmit()">
+  <input type="text" [(ngModel)]="user.username" name="username" formControlName="customName"/>
+  <p *ngIf="customForm.controls.customName?.errors?.userName">{{customForm.controls.customName.errors.userName.errorMsg}}</p>
+  <p *ngIf="customForm.controls.customName?.errors?.required">必填项</p>
+  <button type="submit" [disabled]="!customForm.valid">submit</button>
+</form>
+<button type="button" (click)="onSubmit()">test</button>
+{{customForm.controls.customName.errors| json}}
