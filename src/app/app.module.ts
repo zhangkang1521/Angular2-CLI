@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import {FormDemoComponent} from "./form-demo.component";
 import {FormGroupDemoComponent} from "./form-group-demo.component";
 import {ValidateFormDemoComponent} from "./validate-form.component";
+import {PipeDemoComponent} from "./pipe-demo.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     FormDemoComponent,
     FormGroupDemoComponent,
-    ValidateFormDemoComponent
+    ValidateFormDemoComponent,
+    PipeDemoComponent
   ],
   imports: [
     BrowserModule,
