@@ -8,6 +8,7 @@ import {FormDemoComponent} from "./form-demo.component";
 import {FormGroupDemoComponent} from "./form-group-demo.component";
 import {ValidateFormDemoComponent} from "./validate-form.component";
 import {PipeDemoComponent} from "./pipe-demo.component";
+import {TwoWayBindingComponent} from "./two-way-binding.component";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {PipeDemoComponent} from "./pipe-demo.component";
     FormDemoComponent,
     FormGroupDemoComponent,
     ValidateFormDemoComponent,
-    PipeDemoComponent
+    PipeDemoComponent,
+    TwoWayBindingComponent
   ],
   imports: [
     BrowserModule,
