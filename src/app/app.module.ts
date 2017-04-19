@@ -15,6 +15,8 @@ import {LoginComponent} from "./component/login/login.component";
 import {CanDeactiveGuard} from "./component/compose-message/can-deactive-guard";
 import {HttpInterceptorBackend} from "./http/http-interceptor-backend";
 import {httpFactory} from "./http/http-factory";
+import {AComponent} from "./component/a.component";
+import {BComponent} from "./component/b.component";
 
 
 
@@ -23,7 +25,9 @@ import {httpFactory} from "./http/http-factory";
     AppComponent,
     PageNotFoundComponent,
     ComposeMessageComponent,
-    LoginComponent
+    LoginComponent,
+    AComponent,
+    BComponent
   ],
   imports: [
     BrowserModule,

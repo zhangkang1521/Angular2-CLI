@@ -10,6 +10,7 @@ import { CrisisDetailComponent }     from './crisis-detail.component';
 
 import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
 import {CrisisService} from "./crisis.service";
+import {Random} from "../random";
 
 @NgModule({
   imports: [

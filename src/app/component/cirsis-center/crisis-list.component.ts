@@ -4,7 +4,13 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 
 import { Observable }            from 'rxjs/Observable';
 import {Crisis, CrisisService} from "./crisis.service";
+import {Diamond} from "./diamond";
+import {Triangle} from "./triangle";
+import {ContactService} from "./contact.service";
 
+let contactServiceFactory = (triangle: Triangle) => {
+  return new ContactService(triangle);
+}
 
 @Component({
   template: `
@@ -18,16 +24,25 @@ import {Crisis, CrisisService} from "./crisis.service";
     </ul>
 
     <router-outlet></router-outlet>
-  `
+  `,
+  providers: [
+    {provide: Triangle, useClass: Triangle},
+    {provide: Diamond, useExisting: Triangle},
+    {provide: ContactService, useFactory: contactServiceFactory, deps:[ Triangle ]}
+  ]
 })
+
 export class CrisisListComponent implements OnInit {
   crises: Observable<Crisis[]>;
   selectedId: number;
 
   constructor(
-    private service: CrisisService,
-    private route: ActivatedRoute,
-    private router: Router
+    protected service: CrisisService,
+    protected route: ActivatedRoute,
+    protected router: Router,
+    protected triangle: Triangle,
+    protected diamond: Diamond,
+    protected contactService: ContactService
   ) {}
 
   isSelected(crisis: Crisis) {
@@ -35,13 +50,20 @@ export class CrisisListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.triangle.draw();
+    // this.triangle.stable();
+    // this.diamond.draw();
+    this.contactService.sayHello();
+    // this.diamond.cut();
     this.crises = this.route.params
       .switchMap((params: Params) => {
         this.selectedId = +params['id'];
         // matrix参数，传值给分段对应的Component
         // http://localhost:4201/crisis-center;foo=aa/1;foo=bb
         console.log('crisis list:' + params['foo']);
-        return this.service.getCrises();
+        let crises = this.service.getCrises();
+        this.afterGetList();
+        return crises;
       });
   }
 
@@ -51,4 +73,6 @@ export class CrisisListComponent implements OnInit {
     // Navigate with relative link
     this.router.navigate([crisis.id], { relativeTo: this.route });
   }
+
+  protected afterGetList() {}
 }

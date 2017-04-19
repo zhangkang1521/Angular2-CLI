@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Host} from '@angular/core';
 import {Hero} from "./hero";
 import {ActivatedRoute, Router, Params} from "@angular/router";
 import 'rxjs/add/operator/switchMap'
