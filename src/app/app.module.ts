@@ -9,6 +9,7 @@ import {FormGroupDemoComponent} from "./form-group-demo.component";
 import {ValidateFormDemoComponent} from "./validate-form.component";
 import {PipeDemoComponent} from "./pipe-demo.component";
 import {TwoWayBindingComponent} from "./two-way-binding.component";
+import {SampleModule} from "ngx-zk";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {TwoWayBindingComponent} from "./two-way-binding.component";
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    SampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
   factor: number;
   heroes: Hero[] = [];
 
-  value = 100;
+  value = 123;
 
   ngOnInit(): void {
     for(let i = 0; i < 10; i++) {

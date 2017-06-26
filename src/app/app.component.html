@@ -4,5 +4,7 @@
 <!--<validate-form-demo></validate-form-demo>-->
 <!--<pipe-demo></pipe-demo>-->
 parent:{{value}}
-<two-way-binding [value]="value" (valueChange)="value=$event"></two-way-binding>
+<!--<two-way-binding [value]="value" (valueChange)="value=$event"></two-way-binding>-->
 <!--<two-way-binding [(value)]="value"></two-way-binding>-->
+<sample-component></sample-component>
+{{value | f2y}}
