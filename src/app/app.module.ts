@@ -10,6 +10,7 @@ import {BeautifulBackgroundDirective} from "./directive/beautifulBackground.dire
 import {BeautifulBackground2Directive} from "./directive/beautifulBackground2.directive";
 import {ClickDirective} from "./directive/click.directive";
 import {PluralDemoComponent} from "./component/plural-demo.component";
+import {NumberInputDirective} from "./directive/number-input.directive";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {PluralDemoComponent} from "./component/plural-demo.component";
     BeautifulBackground2Directive,
     BeautifulBackgroundDirective,
     ClickDirective,
-    PluralDemoComponent
+    PluralDemoComponent,
+    NumberInputDirective
   ],
   imports: [
     BrowserModule,

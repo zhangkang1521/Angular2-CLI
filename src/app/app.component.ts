@@ -13,6 +13,8 @@ export class AppComponent {
   // loginControl: FormControl = new FormControl('s', Validators.required);
   loginForm: FormGroup;
 
+  userId;
+
   constructor() {
     this.loginForm = new FormGroup({
       name: new FormControl("", Validators.required),
