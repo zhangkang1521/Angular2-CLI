@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {DemoInputComponent} from "./demo-input.component";
+import {SwitchMapDemoComponent} from "./component/switchmap-demo.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoInputComponent
+    DemoInputComponent,
+    SwitchMapDemoComponent
   ],
   imports: [
     BrowserModule,

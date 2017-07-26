@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
     // this.testMap();
     // this.testForkJoin();
     // this.testConcatMap();
-    this.testTimeout();
+    // this.testTimeout();
   }
 
   // 创建Observable
