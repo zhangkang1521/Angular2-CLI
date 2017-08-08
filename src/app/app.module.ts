@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {ButtonModule} from "primeng/components/button/button";
-import {CheckboxModule} from "primeng/components/checkbox/checkbox";
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import {CheckboxModule} from "primeng/components/checkbox/checkbox";
     BrowserModule,
     FormsModule,
     HttpModule,
-    ButtonModule,
-    CheckboxModule
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
