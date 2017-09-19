@@ -1,5 +1,5 @@
 <p-autoComplete [(ngModel)]="text" [suggestions]="results" (completeMethod)="search($event)"  (onSelect)="onChange($event)" (onClear)="clear()"
-                [inputStyleClass]="'red'">
+                [dropdown]="true"   >
 </p-autoComplete>
 {{text?.id}}
 <div class="red">aa</div>
